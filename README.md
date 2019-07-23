@@ -69,14 +69,14 @@ Create the file sitemap.xml to the src folder and create the text:
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
    <url>
-      <loc>https://sad-clarke-31f3c6.netlify.com</loc>
+      <loc>localhost:4200</loc>
       <lastmod>2019-07-03</lastmod>
       <changefreq>always</changefreq>
       <priority>1.0</priority>
    </url>
 </urlset>
 ```
-Substitute https://sad-clarke-31f3c6.netlify.com for the site URL.
+Substitute localhost:4200 for the site URL.
 
 Modify angular.json and add "src/robots.txt" and "src/sitemap.xml" in tha assets,
 
@@ -138,6 +138,10 @@ npm install easy-pie-chart --save
 ## Add Font Awesome Common Packages
 
 ```
+npm install @fortawesome/fontawesome-free --save
+```
+
+```
 npm install @fortawesome/fontawesome-svg-core --save
 npm install @fortawesome/angular-fontawesome --save
 ```
@@ -149,10 +153,52 @@ npm install @fortawesome/free-brands-svg-icons --save
 npm install @fortawesome/free-solid-svg-icons --save
 ```
 
+## Install jarallax
+
+```
+npm install jarallax --save
+```
+
 ## Install Node Packages
 
 ```
 npn install
+```
+
+Modify angular.json to add the following:
+
+```
+{
+  "projects": {
+    "ng-uikit-pro-standard": {
+...      
+     "arch itect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:browser",
+          "options": {
+...
+            "styles": [
+              "node_modules/@fortawesome/fontawesome-free/scss/fontawesome.scss",
+              "node_modules/@fortawesome/fontawesome-free/scss/solid.scss",
+              "node_modules/@fortawesome/fontawesome-free/scss/regular.scss",
+              "node_modules/@fortawesome/fontawesome-free/scss/brands.scss",
+              "node_modules/ng-uikit-pro-standard/assets/scss/bootstrap/bootstrap.scss",
+              "node_modules/ng-uikit-pro-standard/assets/scss/mdb.scss",
+              "src/styles.scss"
+            ],
+            "scripts": [
+              "node_modules/chart.js/dist/Chart.js",
+              "node_modules/easy-pie-chart/dist/easypiechart.js",
+              "node_modules/screenfull/dist/screenfull.js",
+              "node_modules/hammerjs/hammer.min.js"
+            ]
+...
+          }
+        }
+      }
+    }
+  }
+}  
 ```
 
 ## Install NPM Check Update (NCU) ad Check packages.json for outdated packages

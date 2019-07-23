@@ -1,21 +1,527 @@
-<!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
-  <h1>
-    Welcome to {{ title }}!
-  </h1>
-  <img width="300" alt="Angular Logo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==">
+<mdb-navbar SideClass="navbar navbar-expand-lg navbar-dark bg-primary"[containerInside]="false">
+  <mdb-navbar-brand>
+      <a class="navbar-brand" href="#">
+          <img src="../assets/img/Colorado.png" height="70" alt="Colorado">
+      </a>
+  </mdb-navbar-brand>
+  <links>
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+          <a class="nav-link waves-light" mdbWavesEffect>Home<span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+          <a class="nav-link waves-light" mdbWavesEffect>Subscribe</a>
+      </li>
+      <li class="nav-item">
+          <a class="nav-link waves-light" mdbWavesEffect>Contact Us</a>
+      </li>
+      <li class="nav-item">
+          <a class="nav-link waves-light" mdbWavesEffect>About</a>
+      </li>
+    </ul>
+
+    <ul class="navbar-nav ml-auto nav-flex-icons">
+      <li class="nav-item">
+        <a class="nav-link">
+          <mdb-icon fab icon="twitter"></mdb-icon>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link">
+          <mdb-icon fab icon="facebook"></mdb-icon>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link">
+          <mdb-icon fab icon="youtube"></mdb-icon>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link">
+          <mdb-icon fab icon="instagram"></mdb-icon>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link">
+          <div class="btn-group" mdbDropdown>
+            <mdb-icon fas icon="user" mdbDropdownToggle></mdb-icon>
+            <div class="dropdown-menu dropdown-menu-right dropdown-primary">
+              <a class="dropdown-item" href="#">Action</a>
+              <a class="dropdown-item" href="#">Another action</a>
+              <a class="dropdown-item" href="#">Something else here</a>
+              <div class="divider dropdown-divider"></div>
+              <a class="dropdown-item" href="#">Separated link</a>
+            </div>
+          </div>
+        </a>
+      </li>
+    </ul>    
+  </links>
+</mdb-navbar>
+
+<div class="view intro video-parallax jarallax center-div">
+  <video 
+    src="../assets/img/MaroonBells.mp4"
+    data-jarallax-video="../assets/img/MaroonBells.mp4"
+    frameborder="0" 
+    autoplay=""
+    loop=""
+    muted="">
+  </video>
 </div>
-<h2>Here are some links to help you start: </h2>
-<ul>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://angular.io/tutorial">Tour of Heroes</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://angular.io/cli">CLI Documentation</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://blog.angular.io/">Angular blog</a></h2>
-  </li>
-</ul>
+
+<div class="container flex-center">
+<!-- Material form subscription -->
+<mdb-card>
+
+  <mdb-card-header class="info-color white-text text-center py-4">
+    <h5>
+      <strong>Subscribe</strong>
+    </h5>
+  </mdb-card-header>
+
+  <!--Card content-->
+  <mdb-card-body class="px-lg-5">
+
+    <!-- Form -->
+    <form class="text-center" style="color: #757575;">
+
+      <p>Join our mailing list. We write rarely, but only the best content.</p>
+
+      <p>
+        <a href="" target="_blank">See the last newsletter</a>
+      </p>
+
+      <!-- Name -->
+      <div class="md-form mt-3">
+        <input type="text" id="materialSubscriptionFormPasswords" class="form-control" mdbInput>
+        <label for="materialSubscriptionFormPasswords">Name</label>
+      </div>
+
+      <!-- E-mai -->
+      <div class="md-form">
+        <input type="email" id="materialSubscriptionFormEmail" class="form-control" mdbInput>
+        <label for="materialSubscriptionFormEmail">E-mail</label>
+      </div>
+
+      <!-- Sign in button -->
+      <button mdbBtn color="info" outline="true" rounded="true" block="true" class="z-depth-0 my-4 waves-effect" mdbWavesEffect
+        type="submit">Sign in</button>
+
+    </form>
+    <!-- Form -->
+
+  </mdb-card-body>
+
+</mdb-card>
+<!-- Material form subscription -->
+</div>
+
+<div class="view intro jarallax"
+     style="background-image: url(../assets/img/Colorado.jpg); background-attachment: fixed; height: 1200px;">
+  <div class="full-bg-img mask rgba-white-light">
+    <div class="container">
+      <div class="d-flex align-items-center d-flex justify-content-center" style="height: 1200px">
+        <div class="row mt-5">
+          <div class="col-md-12 wow fadeIn mb-3">
+            <div class="intro-info-content text-center">
+              <h2 class="h1 display-1 mb-2 wow fadeInDown" data-wow-delay="0.3s">Colorado <a
+                class="indigo-text font-bold">Rockies</a>
+              </h2>
+              <h5 class="font-up mb-3 mt-1 font-bold wow fadeIn" data-wow-delay="0.4s">Colourful Colorado</h5>
+              <a mdbBtn color="light-blue" size="lg" class="wow fadeIn waves-light" mdbWavesEffect
+                 data-wow-delay="0.4s">Explore</a>
+              <a mdbBtn color="indigo" size="lg" class="wow fadeIn waves-light" mdbWavesEffect
+                 data-wow-delay="0.4s">Visit</a></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+  <!--Grid row-->
+  <div class="row">
+    <!--Grid column-->
+    <div class="col-md-12 text-center mb-5">
+      <h2 class="h1 font-bold light-blue-text my-5">Lorem ipsum dolor sit amet, consectetur quis elit.</h2>
+      <p align="justify">Lorem ipsum dolor sit amet, consectetur quis elit. Perspiciatis commodi porro, cumque
+        provident
+        rem corporis odit, ut quas dolores maxime nesciunt possimus quis, soluta velit debitis amet, veritatis
+        cupiditate reprehenderit.Lorem ipsum dolor sit amet, consectetur quis elit. Perspiciatis commodi porro,
+        cumque
+        provident rem corporis odit, ut quas dolores maxime nesciunt possimus quis, soluta velit debitis amet,
+        veritatis
+        cupiditate reprehenderit.Lorem ipsum dolor sit amet, consectetur quis elit. Perspiciatis commodi porro,
+        cumque
+        provident rem corporis odit, ut quas dolores maxime nesciunt possimus quis, soluta velit debitis amet,
+        veritatis
+        cupiditate reprehenderit.Lorem ipsum dolor sit amet, consectetur quis elit. Perspiciatis commodi porro,
+        cumque
+        provident rem corporis odit, ut quas dolores maxime nesciunt possimus quis, soluta velit debitis amet,
+        veritatis
+        cupiditate reprehenderit.Lorem ipsum dolor sit amet, consectetur quis elit. Perspiciatis commodi porro,
+        cumque
+        provident rem corporis odit, ut quas dolores maxime nesciunt possimus quis, soluta velit debitis amet,
+        veritatis
+        cupiditate reprehenderit.Lorem ipsum dolor sit amet, consectetur quis elit. Perspiciatis commodi porro,
+        cumque
+        provident rem corporis odit, ut quas dolores maxime nesciunt possimus quis, soluta velit debitis amet,
+        veritatis
+        cupiditate reprehenderit.Lorem ipsum dolor sit amet, consectetur quis elit. Perspiciatis commodi porro,
+        cumque
+        provident rem corporis odit, ut quas dolores maxime nesciunt possimus quis, soluta velit debitis amet,
+        veritatis
+        cupiditate reprehenderit.Lorem ipsum dolor sit amet, consectetur quis elit. Perspiciatis commodi porro,
+        cumque
+        provident rem corporis odit, ut quas dolores maxime nesciunt possimus quis, soluta velit debitis amet,
+        veritatis
+        cupiditate reprehenderit.</p>
+    </div>
+    <!--Grid column-->
+  </div>
+  <!--Grid row-->
+</div>
+
+<div class="container">
+  <!--Grid row-->
+  <div class="row">
+    <!--Grid column-->
+    <div class="col-md-12 text-center my-5">
+      <h2 class="h1 font-bold grey-text mb-5">Lorem ipsum dolor sit amet, consectetur quis elit.</h2>
+      <p align="justify">Lorem ipsum dolor sit amet, consectetur quis elit. Perspiciatis commodi porro, cumque
+        provident
+        rem corporis odit, ut quas dolores maxime nesciunt possimus quis, soluta velit debitis amet, veritatis
+        cupiditate reprehenderit.Lorem ipsum dolor sit amet, consectetur quis elit. Perspiciatis commodi porro,
+        cumque
+        provident rem corporis odit, ut quas dolores maxime nesciunt possimus quis, soluta velit debitis amet,
+        veritatis
+        cupiditate reprehenderit.Lorem ipsum dolor sit amet, consectetur quis elit. Perspiciatis commodi porro,
+        cumque
+        provident rem corporis odit, ut quas dolores maxime nesciunt possimus quis, soluta velit debitis amet,
+        veritatis
+        cupiditate reprehenderit.Lorem ipsum dolor sit amet, consectetur quis elit. Perspiciatis commodi porro,
+        cumque
+        provident rem corporis odit, ut quas dolores maxime nesciunt possimus quis, soluta velit debitis amet,
+        veritatis
+        cupiditate reprehenderit.Lorem ipsum dolor sit amet, consectetur quis elit. Perspiciatis commodi porro,
+        cumque
+        provident rem corporis odit, ut quas dolores maxime nesciunt possimus quis, soluta velit debitis amet,
+        veritatis
+        cupiditate reprehenderit.Lorem ipsum dolor sit amet, consectetur quis elit. Perspiciatis commodi porro,
+        cumque
+        provident rem corporis odit, ut quas dolores maxime nesciunt possimus quis, soluta velit debitis amet,
+        veritatis
+        cupiditate reprehenderit.Lorem ipsum dolor sit amet, consectetur quis elit. Perspiciatis commodi porro,
+        cumque
+        provident rem corporis odit, ut quas dolores maxime nesciunt possimus quis, soluta velit debitis amet,
+        veritatis
+        cupiditate reprehenderit.Lorem ipsum dolor sit amet, consectetur quis elit. Perspiciatis commodi porro,
+        cumque
+        provident rem corporis odit, ut quas dolores maxime nesciunt possimus quis, soluta velit debitis amet,
+        veritatis
+        cupiditate reprehenderit.</p>
+    </div>
+    <!--Grid column-->
+  </div>
+  <!--Grid row-->
+</div>
+
+<div class="view intro jarallax"
+     style="background-image: url(../assets/img/Telluride.jpg); background-attachment: fixed; background-size: cover; min-height: 700px">
+  <div class="full-bg-img mask rgba-purple-slight">
+  </div>
+</div>
+
+<div class="view intro jarallax"
+     style="background-image: url(https://mdbootstrap.com/img/Photos/Others/background.jpg); background-attachment: fixed; min-height: 300px">
+  <div class="full-bg-img mask rgba-purple-slight">
+    <div class="container">
+      <div class="d-flex align-items-center d-flex justify-content-center" style="height: 300px">
+        <div class="row mt-5">
+          <div class="col-md-12 wow fadeIn mb-3">
+            <div class="intro-info-content text-center">
+              <h2 class="h1 display-1 white-text mb-2 wow fadeInDown" data-wow-delay="0.3s">Welcome to Colorado!</h2>
+              <h4 class="mb-3 mt-1 white-text font-bold wow fadeIn" data-wow-delay="0.4s">Lorem ipsum dolor sit
+                amet</h4>
+              <a mdbBtn color="pink" class="wow fadeIn waves-light" mdbWavesEffect data-wow-delay="0.4s">Read
+                more</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+  <!--Grid row-->
+  <div class="row">
+    <!--Grid column-->
+    <div class="col-md-12 text-center my-5">
+      <h2 class="h1 font-bold pink-text mb-5">Lorem ipsum dolor sit amet, consectetur quis elit.</h2>
+      <p align="justify">Lorem ipsum dolor sit amet, consectetur quis elit. Perspiciatis commodi porro, cumque
+        provident
+        rem corporis odit, ut quas dolores maxime nesciunt possimus quis, soluta velit debitis amet, veritatis
+        cupiditate reprehenderit.Lorem ipsum dolor sit amet, consectetur quis elit. Perspiciatis commodi porro,
+        cumque
+        provident rem corporis odit, ut quas dolores maxime nesciunt possimus quis, soluta velit debitis amet,
+        veritatis
+        cupiditate reprehenderit.Lorem ipsum dolor sit amet, consectetur quis elit. Perspiciatis commodi porro,
+        cumque
+        provident rem corporis odit, ut quas dolores maxime nesciunt possimus quis, soluta velit debitis amet,
+        veritatis
+        cupiditate reprehenderit.Lorem ipsum dolor sit amet, consectetur quis elit. Perspiciatis commodi porro,
+        cumque
+        provident rem corporis odit, ut quas dolores maxime nesciunt possimus quis, soluta velit debitis amet,
+        veritatis
+        cupiditate reprehenderit.Lorem ipsum dolor sit amet, consectetur quis elit. Perspiciatis commodi porro,
+        cumque
+        provident rem corporis odit, ut quas dolores maxime nesciunt possimus quis, soluta velit debitis amet,
+        veritatis
+        cupiditate reprehenderit.Lorem ipsum dolor sit amet, consectetur quis elit. Perspiciatis commodi porro,
+        cumque
+        provident rem corporis odit, ut quas dolores maxime nesciunt possimus quis, soluta velit debitis amet,
+        veritatis
+        cupiditate reprehenderit.Lorem ipsum dolor sit amet, consectetur quis elit. Perspiciatis commodi porro,
+        cumque
+        provident rem corporis odit, ut quas dolores maxime nesciunt possimus quis, soluta velit debitis amet,
+        veritatis
+        cupiditate reprehenderit.Lorem ipsum dolor sit amet, consectetur quis elit. Perspiciatis commodi porro,
+        cumque
+        provident rem corporis odit, ut quas dolores maxime nesciunt possimus quis, soluta velit debitis amet,
+        veritatis
+        cupiditate reprehenderit.</p>
+    </div>
+    <!--Grid column-->
+  </div>
+  <!--Grid row-->
+</div>
+
+<div class="view intro jarallax"
+     style="background-image: url(../assets/img/DreamLake.jpg); background-attachment: fixed; background-size: cover; min-height: 700px">
+  <div class="full-bg-img mask rgba-purple-slight">
+  </div>
+</div>
+
+<div class = "container flex-center">
+<!-- Material form contact -->
+<mdb-card>
+
+  <mdb-card-header class="info-color white-text text-center py-4">
+    <h5>
+      <strong>Contact us</strong>
+    </h5>
+  </mdb-card-header>
+
+
+  <!--Card content-->
+  <mdb-card-body class="px-lg-5 pt-0">
+
+    <!-- Form -->
+    <form class="text-center" style="color: #757575;">
+
+      <!-- Name -->
+      <div class="md-form mt-3">
+        <input type="text" id="materialContactFormName" class="form-control" mdbInput>
+        <label for="materialContactFormName">Name</label>
+      </div>
+
+      <!-- E-mail -->
+      <div class="md-form">
+        <input type="email" id="materialContactFormEmail" class="form-control" mdbInput>
+        <label for="materialContactFormEmail">E-mail</label>
+      </div>
+
+      <!-- Subject -->
+      <span>Subject</span>
+      <div class="row">
+        <div class="col-md-12 mx-auto">
+          <!--mdb-select [options]="optionsSelect" placeholder="Choose your option"></mdb-select -->
+        </div>
+      </div>
+
+      <!--Message-->
+      <div class="md-form">
+        <textarea type="text" id="materialContactFormMessage" class="form-control md-textarea" mdbInput></textarea>
+        <label for="materialContactFormMessage">Message</label>
+      </div>
+
+      <!-- Copy -->
+      <div class="row">
+        <div class="col-md-6 mx-auto d-flex justify-content-center">
+          <mdb-checkbox>Send me a copy of this message</mdb-checkbox>
+        </div>
+      </div>
+
+      <!-- Send button -->
+      <button mdbBtn color="info" outline="true" rounded="true" block="true" class="z-depth-0 my-4 waves-effect" mdbWavesEffect
+        type="submit">Send</button>
+
+    </form>
+    <!-- Form -->
+
+  </mdb-card-body>
+
+</mdb-card>
+<!-- Material form contact -->
+</div>
 
 <router-outlet></router-outlet>
+
+
+<!-- Footer -->
+<footer class="page-footer font-small mdb-color darken-3 pt-4">
+
+  <!-- Footer Elements -->
+  <div class="container">
+
+    <!--Grid row-->
+    <div class="row d-flex justify-content-center">
+
+      <!--Grid column-->
+      <div class="col-md-6">
+
+        <!-- Video -->
+        <div class="embed-responsive embed-responsive-16by9 mb-4">
+          <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/vlDzYIIOYmM" allowfullscreen></iframe>
+        </div>
+
+      </div>
+      <!--Grid column-->
+
+    </div>
+    <!--Grid row-->
+
+  </div>
+  <!-- Footer Elements -->
+
+    <!-- Footer Links -->
+    <div class="container text-center text-md-left">
+
+      <!-- Grid row -->
+      <div class="row">
+
+        <!-- Grid column -->
+        <div class="col-md-4 col-lg-3 mr-auto my-md-4 my-0 mt-4 mb-1">
+
+          <!-- Content -->
+          <h5 class="font-weight-bold text-uppercase mb-4">Footer Content</h5>
+          <p>Here you can use rows and columns here to organize your footer content.</p>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit amet numquam iure provident voluptate esse quasi,
+            veritatis totam voluptas nostrum.</p>
+
+        </div>
+        <!-- Grid column -->
+
+        <hr class="clearfix w-100 d-md-none">
+
+        <!-- Grid column -->
+        <div class="col-md-2 col-lg-2 mx-auto my-md-4 my-0 mt-4 mb-1">
+
+          <!-- Links -->
+          <h5 class="font-weight-bold text-uppercase mb-4">About</h5>
+
+          <ul class="list-unstyled">
+            <li>
+              <p>
+                <a href="#!">PROJECTS</a>
+              </p>
+            </li>
+            <li>
+              <p>
+                <a href="#!">ABOUT US</a>
+              </p>
+            </li>
+            <li>
+              <p>
+                <a href="#!">BLOG</a>
+              </p>
+            </li>
+            <li>
+              <p>
+                <a href="#!">AWARDS</a>
+              </p>
+            </li>
+          </ul>
+
+        </div>
+        <!-- Grid column -->
+
+        <hr class="clearfix w-100 d-md-none">
+
+        <!-- Grid column -->
+        <div class="col-md-4 col-lg-3 mx-auto my-md-4 my-0 mt-4 mb-1">
+
+          <!-- Contact details -->
+          <h5 class="font-weight-bold text-uppercase mb-4">Address</h5>
+
+          <ul class="list-unstyled">
+            <li>
+              <p>
+                <mdb-icon fas icon="home" class="mr-3"></mdb-icon> New York, NY 10012, US
+              </p>
+            </li>
+            <li>
+              <p>
+                <mdb-icon fas icon="envelope" class="mr-3"></mdb-icon> info@example.com
+              </p>
+            </li>
+            <li>
+              <p>
+                <mdb-icon fas icon="phone" class="mr-3"></mdb-icon> + 01 234 567 88
+              </p>
+            </li>
+            <li>
+              <p>
+                <mdb-icon fas icon="print" class="mr-3"></mdb-icon> + 01 234 567 88
+              </p>
+            </li>
+          </ul>
+
+        </div>
+        <!-- Grid column -->
+
+        <hr class="clearfix w-100 d-md-none">
+
+        <!-- Grid column -->
+        <div class="col-md-2 col-lg-2 text-center mx-auto my-4">
+
+          <!-- Social buttons -->
+          <h5 class="font-weight-bold text-uppercase mb-4">Follow Us</h5>
+
+          <!-- Facebook -->
+          <a mdbBtn floating="true" type="button" color="btn-fb" mdbWavesEffect>
+            <mdb-icon fab icon="facebook"></mdb-icon>
+          </a>
+          <!-- Twitter -->
+          <a type="button" mdbBtn floating="true" color="btn-tw" mdbWavesEffect>
+            <mdb-icon fab icon="twitter"></mdb-icon>
+          </a>
+          <!-- Google +-->
+          <a type="button" mdbBtn floating="true" color="btn-gplus" mdbWavesEffect>
+            <mdb-icon fab fab icon="youtube"></mdb-icon>
+          </a>
+          <!-- Dribbble -->
+          <a type="button" mdbBtn floating="true" color="btn-dribbble" mdbWavesEffect>
+            <mdb-icon fab icon="instagram"></mdb-icon>
+          </a>
+
+        </div>
+        <!-- Grid column -->
+
+      </div>
+      <!-- Grid row -->
+
+    </div>
+    <!-- Footer Links -->  
+
+  <!-- Copyright -->
+  <div class="footer-copyright text-center py-3">© 2019 Copyright:
+    <a href="https://Colorado.gov"> Corarado.gov</a>
+  </div>
+  <!-- Copyright -->
+
+</footer>
+<!-- Footer --> 

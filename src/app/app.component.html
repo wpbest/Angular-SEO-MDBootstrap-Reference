@@ -1,4 +1,4 @@
-<mdb-navbar SideClass="navbar navbar-expand-lg navbar-dark indigo"[containerInside]="false">
+<mdb-navbar SideClass="navbar fixed-top navbar-expand-lg navbar-dark indigo"[containerInside]="false">
   <mdb-navbar-brand>
       <a class="navbar-brand" href="#">
           <img src="../assets/img/Colorado.png" height="70" alt="Colorado">
@@ -7,19 +7,19 @@
   <links>
     <ul class="navbar-nav mr-auto">
       <li class="nav-item active">
-          <a class="nav-link waves-light" mdbWavesEffect>Home<span class="sr-only">(current)</span></a>
+          <a class="nav-link waves-light" mdbWavesEffect href="#home">Home<span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item">
-          <a class="nav-link waves-light" mdbWavesEffect>Subscribe</a>
+          <a class="nav-link waves-light" mdbWavesEffect href="#subscribe">Subscribe</a>
       </li>
       <li class="nav-item">
-          <a class="nav-link waves-light" mdbWavesEffect>Directions</a>
+          <a class="nav-link waves-light" mdbWavesEffect href="#directions">Directions</a>
       </li>
       <li class="nav-item">
-          <a class="nav-link waves-light" mdbWavesEffect>Contact Us</a>
+          <a class="nav-link waves-light" mdbWavesEffect href="#contactus">Contact Us</a>
       </li>
       <li class="nav-item">
-          <a class="nav-link waves-light" mdbWavesEffect>About</a>
+          <a class="nav-link waves-light" mdbWavesEffect href="#about">About</a>
       </li>
     </ul>
 
@@ -60,7 +60,7 @@
   </links>
 </mdb-navbar>
 
-<div class="view intro video-parallax jarallax center-div">
+<div id="home" class="view intro video-parallax jarallax center-div">
   <video 
     src="../assets/img/MaroonBells.mp4"
     data-jarallax-video="../assets/img/MaroonBells.mp4"
@@ -74,7 +74,7 @@
    </div>
 </div>
 
-<div class="container flex-center">
+<div id="subscribe" class="container flex-center">
 <!-- Material form subscription -->
 <mdb-card>
 
@@ -248,7 +248,7 @@
 </div>
 
 <!--Grid row-->
-<div class="row">
+<div id="directions" class="row">
 
     <!--Grid column-->
     <div class="col-md-6 mb-4">
@@ -321,7 +321,7 @@
 </div>
 
 
-<div class = "container flex-center">
+<div id="contactus" class = "container flex-center">
 <!-- Material form contact -->
 <mdb-card>
 
@@ -398,7 +398,7 @@
 <footer class="page-footer font-small mdb-color darken-3 pt-4">
 
   <!-- Footer Elements -->
-  <div class="container">
+  <div id="about" class="container">
 
     <!--Grid row-->
     <div class="row d-flex justify-content-center">

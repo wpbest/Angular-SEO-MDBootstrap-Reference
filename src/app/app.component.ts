@@ -19,9 +19,21 @@ selector: 'app-root',
 })
 export class AppComponent implements AfterViewInit {
 
+  selectedIndex: number = null;
+ link = [
+  { link: '#home', label: 'Home' },
+  { link: '#subscribe', label: 'Subscribe' },
+  { link: '#directions', label: 'Directions' },
+  { link: '#contactus', label: 'Contact Us' },
+  { link: '#about', label: 'About' },
+ ];
   ngAfterViewInit() {
     jarallax(document.querySelectorAll('.jarallax'), {
       speed: 0.2
     });
+  }
+
+  setIndex(index: number) {
+     this.selectedIndex = index;
   }
 }

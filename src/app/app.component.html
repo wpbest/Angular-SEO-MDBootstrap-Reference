@@ -6,20 +6,9 @@
   </mdb-navbar-brand>
   <links>
     <ul class="navbar-nav mr-auto">
-      <li class="nav-item active">
-          <a class="nav-link waves-light" mdbWavesEffect href="#home">Home<span class="sr-only">(current)</span></a>
-      </li>
-      <li class="nav-item">
-          <a class="nav-link waves-light" mdbWavesEffect href="#subscribe">Subscribe</a>
-      </li>
-      <li class="nav-item">
-          <a class="nav-link waves-light" mdbWavesEffect href="#directions">Directions</a>
-      </li>
-      <li class="nav-item">
-          <a class="nav-link waves-light" mdbWavesEffect href="#contactus">Contact Us</a>
-      </li>
-      <li class="nav-item">
-          <a class="nav-link waves-light" mdbWavesEffect href="#about">About</a>
+      <li [class.active]="selectedIndex === i"
+      (click)="setIndex(i)" class="nav-item" *ngFor="let l of link; let i = index">
+          <a  class="nav-link waves-light" mdbWavesEffect href="{{l.link}}">{{l.label}}</a>
       </li>
     </ul>
 
@@ -56,15 +45,15 @@
           </div>
         </a>
       </li>
-    </ul>    
+    </ul>
   </links>
 </mdb-navbar>
 
 <div id="home" class="view intro video-parallax jarallax center-div">
-  <video 
+  <video
     src="../assets/img/MaroonBells.mp4"
     data-jarallax-video="../assets/img/MaroonBells.mp4"
-    frameborder="0" 
+    frameborder="0"
     autoplay=""
     loop=""
     muted="">
@@ -252,65 +241,65 @@
 
     <!--Grid column-->
     <div class="col-md-6 mb-4">
-  
+
       <!--Card-->
       <div class="card card-cascade narrower">
-  
+
         <!--Card image-->
         <div class="view view-cascade gradient-card-header blue-gradient">
           <h5 class="mb-0">Regular map</h5>
         </div>
         <!--/Card image-->
-  
+
         <!--Card content-->
         <div class="card-body card-body-cascade text-center">
-  
+
           <!--Google map-->
           <div id="map-container-google-8" class="z-depth-1-half map-container-5" style="height: 300px">
             <iframe src="https://maps.google.com/maps/ms?msid=213647366514088767475.0004c6cae9d723b5199d1&msa=0&hl=en&ie=UTF8&ll=39.697149,-104.957199&spn=0.181788,0.531764&t=m&output=embed"
               frameborder="0" style="border:0" allowfullscreen></iframe>
           </div>
-  
+
         </div>
         <!--/.Card content-->
-  
+
       </div>
       <!--/.Card-->
-  
+
     </div>
     <!--Grid column-->
-  
+
     <!--Grid column-->
     <div class="col-md-6 mb-4">
-  
+
       <!--Card-->
       <div class="card card-cascade narrower">
-  
+
         <!--Card image-->
         <div class="view view-cascade gradient-card-header peach-gradient">
           <h5 class="mb-0">Custom map</h5>
         </div>
         <!--/Card image-->
-  
+
         <!--Card content-->
         <div class="card-body card-body-cascade text-center">
-  
+
           <!--Google map-->
           <div id="map-container-google-9" class="z-depth-1-half map-container-5" style="height: 300px">
             <iframe src="https://maps.google.com/maps/ms?msid=213647366514088767475.0004c6cae9d723b5199d1&msa=0&hl=en&ie=UTF8&ll=39.697149,-104.957199&spn=0.181788,0.531764&t=m&output=embed" frameborder="0"
               style="border:0" allowfullscreen></iframe>
           </div>
-  
-  
+
+
         </div>
         <!--/.Card content-->
-  
+
       </div>
       <!--/.Card-->
-  
+
     </div>
     <!--Grid column-->
-  
+
   </div>
   <!--Grid row-->
 
@@ -538,7 +527,7 @@
       <!-- Grid row -->
 
     </div>
-    <!-- Footer Links -->  
+    <!-- Footer Links -->
 
   <!-- Copyright -->
   <div class="footer-copyright text-center py-3">© 2019 Copyright:
@@ -547,4 +536,4 @@
   <!-- Copyright -->
 
 </footer>
-<!-- Footer --> 
+<!-- Footer -->
